@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-color: blueviolet;
+            width: 100vw;
+            height: 100vh;
+        }
+        .notebook{
+            position: absolute; 
+            top: 40%;
+            left: 50%;
+            background-color: white;
+            border-radius: 5px;
+            width: 350px;
+            height: 220px;
+            translate: -50% -50%;
+            box-shadow: 50px 50px 40px rgba(0, 0, 0, 0.555);
+        }
+        .slide-container{ 
+            position: absolute; 
+            top: 50%;
+            left: 50%;
+            width: 320px;
+            height: 200px;
+           margin-left: auto;
+           margin-right: auto;
+           overflow: hidden;
+           text-align: center;
+           translate: -50% -50%;
+        }
+        img.slide-image{ 
+           float: left;
+           width: 320px;
+           height: 200px;
+        }
+        div.image-container{
+            position: relative;
+            width:960px ;
+            height: 200px;
+            transition: left 2s;
+            -moz-transition: left 2s;
+            -webkit-transition: left 2s;
+            -o-transition: left 2s;
+            
+        }
+        div.butoon-container{
+            position: absolute;
+            background: lightgray url('Teclado\ qwerty\ de\ computadora\ portátil\ con\ botones\ de\ teclas\ negras_\ ilustración\ de\ vector\ plano\ simple\ aislado\ sobre\ fondo\ blanco\ _\ Vector\ Premium.jpg') ;
+            background-position: center center;
+            background-size: cover;
+            border: 4px solid lightgray;
+            border-radius: 10px;
+            box-shadow: 50px 50px 40px rgba(0, 0, 0, 0.555);
+            width: 400px;
+            height: 180px;
+            transform: perspective(300px) rotatex(30deg);
+            top: 100%;
+            left: 50%;
+            translate: -50% -12%;
+            
+        }
+        a.slider-butoon{
+            display: inline-block;
+            position: absolute;
+            text-align: center;
+            top: 23.5%;
+            width: 21px;
+            height: 19px;
+            color: black;
+            font-size: 0.5em;
+            font-weight: bolder;
+            border-radius: 1px;
+            background-color: rgb(76, 161, 231);
+
+        }
+        .p{
+            
+            left: 12.5%;
+        }
+        #slider-image-1:target ~ .image-container{
+            left:0px ;
+        }
+        .s{
+            left: 18.5%;
+        }
+        #slider-image-2:target ~ .image-container{
+            left: -320px; 
+        } 
+        .t{
+            left: 24.5%;
+        }
+        #slider-image-3:target ~ .image-container{
+            left: -640px; 
+        }
+    </style>
+</head>
+<body>
+    <main class="notebook">
+        <section class="slide-container">
+            <span id="slider-image-1"></span>
+            <span id="slider-image-2"></span>
+            <span id="slider-image-3"></span>
+            <div class="image-container">
+                <img src="10545818-natureza-paisagem-com-fundo-via-lactea-vetor.jpg" class="slide-image">
+                <img src="2836813-paisagem-do-espaco-sideral-vetor.jpg" class="slide-image">
+                <img src="depositphotos_619045818-stock-photo-aurora-borealis-on-the-norway.jpg" class="slide-image">
+            </div>
+        </section>
+        <div class="butoon-container">
+                <a href="#slider-image-1" class="slider-butoon p">! <br>1</a>
+                <a href="#slider-image-2" class="slider-butoon s">@ <br>2</a>
+                <a href="#slider-image-3" class="slider-butoon t"># <br>3</a>
+            </div>
+    </main>
+</body>
+</html>
