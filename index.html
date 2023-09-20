@@ -6,12 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>slide</title>
     <style>
-        @media screen and (min-width: 320px) and (max-width: 500px){
-            body{
-                width: 80vw;
-                height: 80vh;
-            }
-        }
         *{
             padding: 0px;
             margin: 0px;
@@ -59,7 +53,7 @@
             -o-transition: left 2s;
             
         }
-        div.butoon-container{
+        div.button-container{
             position: absolute;
             background: lightgray url('Teclado\ qwerty\ de\ computadora\ portátil\ con\ botones\ de\ teclas\ negras_\ ilustración\ de\ vector\ plano\ simple\ aislado\ sobre\ fondo\ blanco\ _\ Vector\ Premium.jpg') ;
             background-position: center center;
@@ -108,6 +102,30 @@
         #slider-image-3:target ~ .image-container{
             left: -640px; 
         }
+        @media screen and (min-width: 320px) and (max-width: 500px){     
+           .notebook{
+            width: 300px; 
+            height: 170px; 
+           }
+           .slide-container{
+            width: 270px; 
+            height: 150px; 
+           }
+           div.button-container{
+            width: 330px; 
+            height: 150px; 
+           }
+           img.slide-image{
+            width: 270px; 
+            height: 150px; 
+           }
+           #slider-image-2:target ~ .image-container{
+            left: -270px; 
+        } 
+           #slider-image-3:target ~ .image-container{
+            left: -540px; 
+        }
+        }
     </style>
 </head>
 <body>
@@ -122,7 +140,7 @@
                 <img src="depositphotos_619045818-stock-photo-aurora-borealis-on-the-norway.jpg" class="slide-image">
             </div>
         </section>
-        <div class="butoon-container">
+        <div class="button-container">
                 <a href="#slider-image-1" class="slider-butoon p">! <br>1</a>
                 <a href="#slider-image-2" class="slider-butoon s">@ <br>2</a>
                 <a href="#slider-image-3" class="slider-butoon t"># <br>3</a>
